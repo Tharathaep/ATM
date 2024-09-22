@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>ATM App</title>
+</head>
+<body>
+    <div class="container" >
+        <h1 style="color: black;">Anya ATM</h1>
+        <a href="{{ url_for('create_account') }} " style="color: black;">Create Account</a><br>
+        <a href="{{ url_for('check_balance') }}" style="color: black;">Check Balance</a><br>
+        <a href="{{ url_for('deposit') }}" style="color: black;">Deposit</a><br>
+        <a href="{{ url_for('withdraw') }}" style="color: black;">Withdraw</a><br>
+        <a href="{{ url_for('delete_account') }}" style="color: black;">Delete</a>
+    </div>
+    
+</body>
+</html>

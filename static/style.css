@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    background-image: url(4.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ข้อความหัวเรื่อง */
+h1 {
+    text-align: center;
+    color: var(--primary-color); /* ใช้สีหลักของออมสิน */
+}
+
+/* ป้ายกำกับ */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* กล่อง input */
+input[type="text"], input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e14c4c;
+    border-radius: 4px;
+}
+
+/* ปุ่มกด */
+button {
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 2px solid var(--secondary-color); /* เพิ่มกรอบให้ปุ่มด้วยสีทอง */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: buttonAnimation 1s infinite alternate; /* เพิ่มแอนิเมชัน */
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color); /* เปลี่ยนสีข้อความให้ตัดกับพื้นหลัง */
+    border: 2px solid var(--primary-color); /* กรอบเปลี่ยนเป็นสีชมพูเมื่อ hover */
+    transform: scale(1.1); /* ปุ่มขยายขนาดเมื่อ hover */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* กำหนด animation ให้ปุ่ม */
+@keyframes buttonAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px); /* ปุ่มจะขยับขึ้นลงเล็กน้อย */
+    }
+}
+
+/* ลิงก์ */
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* ตัวแปรสี */
+:root {
+    --primary-color: #da7aa2; /* สีชมพูเข้มของธนาคารออมสิน */
+    --secondary-color: #ee9bca; /* สีทอง */
+}
+
+/* ปรับแต่งสำหรับหน้าจอขนาดเล็ก */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    input[type="text"], input[type="number"], button {
+        padding: 12px;
+    }
+}
